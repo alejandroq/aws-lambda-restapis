@@ -1,4 +1,4 @@
-module github.com/alejandroq/Moc/transactionsapi
+module github.com/alejandroq/aws-lambda-restapis
 
 require (
 	github.com/akrylysov/algnhsa v0.12.1
