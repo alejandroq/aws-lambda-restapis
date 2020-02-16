@@ -1,5 +1,9 @@
 FUNCTION_NAME := transactionsapi
 
+.PHONY: start
+start:
+	go run cmd/server/main.go
+
 .PHONY: all
 all: deploy
 
@@ -32,7 +36,7 @@ build:
 	GO111MODULE=on GOOS=linux go build -ldflags="-s -w" -o bin/lambda cmd/lambda/main.go
 
 .PHONY: deploy
-deploy: lint lint-ci vet test clean build
+deploy: lint vet test clean build
 	npx sls deploy --verbose
 
 .PHONY: remove
