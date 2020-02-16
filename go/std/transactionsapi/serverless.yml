@@ -1,0 +1,23 @@
+service: gotransactionsapi
+
+provider:
+  name: aws
+  runtime: go1.x
+  memorySize: 128
+
+package:
+  exclude:
+    - ./**
+  include:
+    - ./bin/**
+
+functions:
+  hello:
+    handler: bin/lambda
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{any+}
+          method: ANY

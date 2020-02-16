@@ -1,0 +1,23 @@
+service: transactionsapi
+
+provider:
+    name: aws
+    runtime: rust
+    memorySize: 128
+
+package:
+    individually: true
+
+plugins:
+    - serverless-rust
+
+functions:
+    transactionsapi:
+        handler: transactionsapi.main
+        events:
+            - http:
+                path: /
+                method: ANY
+            - http:
+                path: /{any+}
+                method: ANY
