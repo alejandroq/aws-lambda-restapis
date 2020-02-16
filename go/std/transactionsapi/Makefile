@@ -46,7 +46,3 @@ remove:
 .PHONY: logs
 logs:
 	npx sls logs -f ${FUNCTION_NAME}
-
-.PHONY: invoke
-invoke:
-	npx sls invoke -f $(FUNCTION_NAME) -l -p ./invoke/event.json
