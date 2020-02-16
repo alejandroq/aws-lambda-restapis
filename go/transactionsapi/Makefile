@@ -1,4 +1,4 @@
-FUNCTION_NAME := transactionsapi
+FUNCTION_NAME := gotransactionsapi
 
 .PHONY: start
 start:
