@@ -1,0 +1,2 @@
+# So as not to leak personal http tests.
+*.http

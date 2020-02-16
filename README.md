@@ -1,0 +1,1 @@
+Per the results of the experiments, between Rust and Go, the preferred REST APIs are as follows: `activx-web` in Rust for its stable toolchain and `gin` in Go for its robustness and simplicity. Both solutions work as adequately in a server environment as it does in a Lambda.

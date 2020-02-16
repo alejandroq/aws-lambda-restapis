@@ -1,3 +1,0 @@
-@url = https://soh4r3aoz6.execute-api.us-east-1.amazonaws.com/dev
-
-GET {{url}}/world

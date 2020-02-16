@@ -1,7 +1,0 @@
-@url = https://vm7f7k0tle.execute-api.us-east-1.amazonaws.com/dev
-
-GET {{url}}
-
-###
-
-GET {{url}}/hello
