@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/akrylysov/algnhsa"
-	"github.com/alejandroq/aws-lambda-restapis/internal/handlers/router"
+	"github.com/alejandroq/aws-lambda-restapis/internal/router"
 )
 
 func main() {

@@ -16,7 +16,7 @@ coverage:
 	go tool cover -html=coverage.out ; go tool cover -func=coverage.out
 
 .PHONY: lint
-lint:
+lint: # use golangci-lint
 	golint $(shell find * -type d | egrep -v '^vendor')
 
 .PHONY: vet
@@ -46,3 +46,7 @@ remove:
 .PHONY: logs
 logs:
 	npx sls logs -f ${FUNCTION_NAME}
+
+.PHONY: dependencytree
+dependencytree:
+	godepgraph -o github.com/alejandroq/aws-lambda-restapis -s github.com/alejandroq/aws-lambda-restapis/cmd/lambda | dot -Tpng -o .github/dependencytree.png
